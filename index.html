@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8-Step Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <h1>8 Step Form</h1>
+        <div class="progress-bar-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <div class="steps">
+            <!-- Step 1 -->
+            <div class="step" id="step1">
+                <h2>Step 1: Personal Info</h2>
+                <p>Name:</p>
+                <input type="text" id="name" placeholder="Enter your name">
+                <button class="next-btn" onclick="nextStep(1)">Next</button>
+            </div>
+            <!-- Step 2 -->
+            <div class="step" id="step2">
+                <h2>Step 2: Contact Info</h2>
+                <p>Email:</p>
+                <input type="email" id="email" placeholder="Enter your email">
+                <button class="prev-btn" onclick="prevStep(2)">Previous</button>
+                <button class="next-btn" onclick="nextStep(2)">Next</button>
+            </div>
+            <!-- Step 3 -->
+            <div class="step" id="step3">
+                <h2>Step 3: Address</h2>
+                <p>Address:</p>
+                <input type="text" id="address" placeholder="Enter your address">
+                <button class="prev-btn" onclick="prevStep(3)">Previous</button>
+                <button class="next-btn" onclick="nextStep(3)">Next</button>
+            </div>
+            <!-- Step 4 -->
+            <div class="step" id="step4">
+                <h2>Step 4: Phone</h2>
+                <p>Phone Number:</p>
+                <input type="tel" id="phone" placeholder="Enter your phone number">
+                <button class="prev-btn" onclick="prevStep(4)">Previous</button>
+                <button class="next-btn" onclick="nextStep(4)">Next</button>
+            </div>
+            <!-- Step 5 -->
+            <div class="step" id="step5">
+                <h2>Step 5: Age</h2>
+                <p>Age:</p>
+                <input type="number" id="age" placeholder="Enter your age">
+                <button class="prev-btn" onclick="prevStep(5)">Previous</button>
+                <button class="next-btn" onclick="nextStep(5)">Next</button>
+            </div>
+            <!-- Step 6 -->
+            <div class="step" id="step6">
+                <h2>Step 6: Gender</h2>
+                <p>Gender:</p>
+                <select id="gender">
+                    <option value="">Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+                <button class="prev-btn" onclick="prevStep(6)">Previous</button>
+                <button class="next-btn" onclick="nextStep(6)">Next</button>
+            </div>
+            <!-- Step 7 -->
+            <div class="step" id="step7">
+                <h2>Step 7: Preferences</h2>
+                <p>Preferences:</p>
+                <input type="text" id="preferences" placeholder="Enter your preferences">
+                <button class="prev-btn" onclick="prevStep(7)">Previous</button>
+                <button class="next-btn" onclick="nextStep(7)">Next</button>
+            </div>
+            <!-- Step 8 -->
+            <div class="step" id="step8">
+                <h2>Step 8: Confirm & Submit</h2>
+                <p>Review your details before submitting.</p>
+                <button class="prev-btn" onclick="prevStep(8)">Previous</button>
+                <button class="submit-btn" onclick="submitForm()">Submit</button>
+            </div>
+        </div>
+    </div>
+    <a href="./form-2.html">form-2</a>
+    <script src="./app.js"></script>
+</body>
+
+</html>
