@@ -1,0 +1,81 @@
+```
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Image Generator</h1>
+        <input type="text" id="image-url" placeholder="Enter image URL">
+        <button id="generate-btn">Generate Image</button>
+        <div id="image-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    margin: 40px auto;
+}
+
+#image-url {
+    width: 50%;
+    height: 30px;
+    font-size: 18px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#generate-btn {
+    width: 20%;
+    height: 40px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#generate-btn:hover {
+    background-color: #3e8e41;
+}
+
+#image-container {
+    width: 50%;
+    height: 300px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+/* script.js */
+const imageUrlInput = document.getElementById('image-url');
+const generateBtn = document.getElementById('generate-btn');
+const imageContainer = document.getElementById('image-container');
+
+generateBtn.addEventListener('click', () => {
+    const imageUrl = imageUrlInput.value;
+    if (imageUrl) {
+        const image = document.createElement('img');
+        image.src = imageUrl;
+        imageContainer.innerHTML = '';
+        imageContainer.appendChild(image);
+    } else {
+        alert('Please enter an image URL');
+    }
+});
+```
